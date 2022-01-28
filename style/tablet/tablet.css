@@ -1,0 +1,36 @@
+/* about section */
+#about h2 {
+  font-size: 22em;
+  top: 28rem;
+}
+
+#about::before {
+  left: -30%;
+}
+
+.socialsWrapper1, .socialsWrapper2 {
+  margin: 0 2rem !important;
+}
+
+/* skills section */
+.skillsLeft {
+  width: 38%;
+}
+
+.skillsLeft div {
+  width: 40%;
+}
+
+.skillsLeft img {
+  width: 66%;
+  height: auto;
+}
+
+#skills {
+  padding: 5rem 2rem 10rem 2rem;
+}
+
+#skills .skillsLeft, #skills .skillsRight {
+  margin: 0 1rem;
+}
+/*# sourceMappingURL=tablet.css.map */

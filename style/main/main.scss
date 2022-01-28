@@ -1,0 +1,728 @@
+@import "_vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $backgroundColor;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+
+    p::first-letter{
+        padding-left: 1rem;
+    }
+
+    p{
+        text-align: justify;
+    }
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* --------------- scrollbar --------------- */
+
+body::-webkit-scrollbar{
+    width: 15px;
+
+    &-button{
+        background-color: darken($backgroundColor, 8%);
+        background-size: 13px 13px;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &:vertical:decrement{
+            background-image: url(../../images/up.png);
+        }
+
+        &:vertical:increment{
+            background-image: url(../../images/down.png);
+        }
+
+        &:horizontal:increment{
+            background-image: url(../../images/right.png);
+        }
+
+        &:horizontal:decrement{
+            background-image: url(../../images/left.png);
+        }
+
+        &:hover{
+            background-color: lighten($backgroundColor, 10%);
+        }
+    }
+
+   &-track{
+        background-color: darken($backgroundColor, 5%);
+        box-shadow: inset 0 0 5px  darken($backgroundColor, 10%); 
+        border-left: 1px solid darken($backgroundColor, 10%);
+    }
+    
+    &-corner{
+         background-color: darken($backgroundColor, 10%);
+    }
+    
+    &-thumb{
+        background-color: darken($headerColor, 13%);
+        box-shadow: inset 0 0 2px  darken($headerColor, 30%);
+    
+        &:active{
+            background-color: lighten($headerColor, 10%);
+        }
+
+    }
+
+}
+
+
+/* --------------- header --------------- */
+
+.mainHeader{
+    background: url(../../images/bg.png) center 0 no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.headerBackground{
+    background-color: rgba($backgroundColor, 0.7);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+
+    .logoImg{
+        width: 280px;
+    }
+}
+
+.headerContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    margin-top: 5.5rem;
+    font-size: 1.3em;
+    width: 100%;
+
+    &::before{
+        position: absolute;
+        content: '';
+        height: 12rem;
+        @include gradientBorders(0, 1.5px, 0, 0, to bottom);
+    }
+
+}
+
+.introduction{
+    width: 33rem;
+    padding-left: 1rem;
+
+    div>h1, div>h2, div{
+        padding-top: 0.6rem ; 
+        margin: 0;
+        font-weight: 500;
+    }
+
+    div>h2{
+        color: $secondColor;     
+    }
+
+    .hire{
+        height: 110px;
+        width: 20rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @keyframes hireButtonAnimation{
+            from{background-color: transparent;}
+            to{background-color: darken(rgba($backgroundColor, 0.5), 5%);}
+        }
+
+        a{
+            display: block;   
+            @include gradientBorders(4px, 4px, 4px, 4px, to top right);   
+            padding: 10px 30px;
+            font-weight: 600;
+            font-size: 1.2em;
+            color: darken($secondColor, 5%);
+            transition: padding 0.1s , background-color 0.3s ;
+            animation: hireButtonAnimation 4s ease 1s infinite alternate none;
+        }
+
+        a:hover{
+            padding: 10px 35px;
+            background-color: darken(rgba($backgroundColor, 0.5), 5%);
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+        }
+    }
+}
+
+
+.mainNav{
+    width: 400px;
+    margin: -1rem 3rem ;
+    height: 100%;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    @include flex(row, wrap, center, flex-start, space-around);
+
+    li{
+        font-size: 1.1em;
+        margin: 15px;
+        background-color: lighten(rgba($backgroundColor, 0.3), 50%); 
+        text-align: center;
+        transition: flex-grow 0.2s ease-in-out, border 0.3s;
+        box-shadow: 3px 3px 3px lighten(rgba($backgroundColor, 0.2), 40%);
+
+        a{
+            display: block;
+            padding: 20px 40px;
+        }
+    }
+            
+    li:nth-child(odd){
+        margin-left: 0px;
+    }
+
+    li:nth-child(even){
+        margin-right: 0px;
+    }
+
+    li:hover{
+        flex-grow: 0.5;
+        background-color: lighten(rgba($backgroundColor, 0.3), 30%);
+        box-shadow: 3px 3px 2px lighten(rgba($backgroundColor, 0.2), 40%)
+    }
+
+    li:nth-child(odd):hover{
+        @include gradientBorders(0, 0, 2px, 0, to top right);
+    }
+
+    li:nth-child(even):hover{
+        @include gradientBorders(0, 2px, 0, 0, to top right);
+    }
+
+    li:last-child:hover{
+        @include gradientBorders(2px, 0, 0, 0, to right);           
+   }
+
+}
+
+
+/* --------------- about section --------------- */
+
+
+#about{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    &::before{
+        content: 'Introduction';
+        color: $backgroundColor;
+        @extend %headersSize;
+        position: relative;
+        top: -0.9em;
+        left: -9.5em;
+    }
+
+    h2{
+        position: absolute;
+        top: 25rem;
+        font-size: 25em;
+        color: darken($backgroundColor, 10%);
+        z-index: -1;
+    }
+
+        
+    article{
+        width: 60%;
+
+        p{
+            text-align: center;
+        }
+    }
+}
+
+
+.socialMedias{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .myImage{
+        margin-top: -3em;
+        display: flex;
+        flex-flow: column nowrap;
+    
+        img{
+            width: 350px;
+            height: auto;    
+        }
+    
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: darken($secondaryBackgroundColor, 30%);
+            box-shadow: 0 -2px 5px darken($secondaryBackgroundColor, 35%);
+        }
+    }
+
+    .socialsWrapper1>div{
+        justify-content: flex-end;
+    }
+
+ 
+
+    .socialsWrapper1, .socialsWrapper2{
+        margin: 0 5.5em;
+        font-size: 1.1em;
+
+        div{
+            margin-top: 3em;
+            display: flex;
+            align-items: center;
+        }
+
+        div:hover>img{
+            transform: rotateZ(360deg);
+        }
+
+        img{
+            width: 50px;
+            height: auto;
+            border-radius: 40%;
+            margin: 0 1rem;
+            transition: transform 1s ;
+        }
+
+    }
+
+
+    .fb{
+        @include s-colors(#129af6);
+    }
+
+    .insta{
+        @include s-colors(#fcb25b);
+    }
+
+
+    %yt-dribble-icons{
+        padding: 5px;
+        width: 40px;
+        height: auto;
+    }
+
+    .dribble{
+        @include s-colors(#e84c8b);
+
+        img{
+            @extend %yt-dribble-icons;
+        }
+
+    }
+
+    .yt{
+        @include s-colors(#FF0000);
+
+        img{
+            @extend %yt-dribble-icons; 
+        }
+           
+    }
+
+}
+
+
+/* --------------- skills section ---------------- */
+
+
+#skills{
+    background-color: darken($backgroundColor, 8%);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 7rem 0 0 0;
+    padding: 5rem 5rem 10rem 5rem;
+    @include flex(row, wrap, center, flex-start, flex-start);
+    
+    .skillsLeft, .skillsRight{
+        margin: 0 3rem;
+    }
+
+    .sectionTitle{
+        position: relative;
+        top: -5.7rem;
+        width: 100%;
+        margin: -2rem 0;
+        color: darken($backgroundColor, 8%);
+       @extend %headersSize;
+
+    }
+}
+
+.skillsLeft{
+    width: 35%;
+    @include flex(row, wrap, space-between, center, space-between);
+
+    div{
+        @include flex(column, nowrap, center, center, flex-start);
+        width: 10rem;
+        height: 10rem;
+         background-color: rgba($secondaryBackgroundColor, 0.7); 
+        margin: 1rem;
+    }
+
+    img{
+        padding: 6px;
+        margin-top: -3px;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 66%;
+        height: auto;
+    }
+
+}
+
+.skillsRight{
+   width: 45%;
+
+   .skillsText>h2{
+        font-size: 3em;
+        font-weight: lighter;
+        margin: 20px 0;
+   }
+}
+
+.chart{
+    width: 100%
+}
+
+
+.chartWrapper{
+    @include flex(row, wrap, space-between, flex-start, space-between);
+    width: 100%;
+    margin-top: 1.5rem;
+
+    .skillName, .skillPercent{
+        width: 45%;
+        padding: 2px 0.2rem;
+        margin-bottom: 4px;
+
+    }
+
+    .skillPercent{
+        text-align: right;
+    }
+
+    .skillBarHTML, .skillBarCSS, .skillBarJS, .skillBarPS{
+        width: 100%;
+        height: 0.1rem;
+        margin-top: 0.45rem;
+        background-color: $secondaryBackgroundColor;
+
+        &::before{
+            content: '';
+            display: block;
+            margin-top: -0.35rem;
+            height: 0.8rem;
+        }
+        
+    }
+
+    .skillBarHTML::before{
+        background-color: $headerColor;
+        width: 65%;
+    }
+
+    .skillBarCSS::before{
+        background-color: #DD7560;
+        width: 80%;
+    }
+
+    .skillBarJS::before{
+        background-color: #fcb25b;
+        width: 35%;
+    }
+
+    .skillBarPS::before{
+        background-color: #f9f871;
+        width: 25%;
+    }
+}
+
+
+/* --------------- projects section ---------------- */
+
+
+#projects{
+    padding: 6rem 0rem;
+    background-image: linear-gradient(darken($backgroundColor, 8%), darken($headerColor, 25%), darken($headerColor, 20%), darken($backgroundColor, 8%));
+
+    &::before{
+        content: 'My Projects';
+        position: relative;
+        color: darken($headerColor, 10%);
+        top: -5rem;
+        left: 2rem;
+        @extend %headersSize;
+
+    }
+
+    .projectsText{
+        width: 75%;
+        margin: 0 auto;
+
+        h2{
+            font-size: 2.5em;
+            font-weight: lighter;
+            width: 70%;
+        }
+    }
+}
+
+
+.images{
+    width: 100%;
+    background-color: darken(rgba($backgroundColor, 0.3), 10%);
+    padding: 4rem 0;
+    margin: 5rem 0;
+    overflow: hidden;
+    box-shadow: inset 0 0 4rem rgba(darken($backgroundColor, 30%), 0.7), 0 0 2rem darken($backgroundColor, 20%);
+}
+
+@keyframes slide{
+    0%{left: 0;}
+    10%{left: -32.9%;}
+    16%{left: -33%;}
+    26%{left: -66.9%;}
+    33%{left: -67%;}
+    42%{left: -99.9%;}
+    48%{left: -100%;}
+    59%{left: -132.9%;}
+    65%{left: -133%;}
+    75%{left: -165.9%;}
+    82%{left: -166%;}
+    92%{left: -199.9%;}
+    100%{left: -200%;}
+}
+
+@keyframes sizeAnimation{
+    0%{width: 300px;}
+    10%{width: 338px;}
+    16%{width: 338px;}
+    26%{width: 300px;}
+    100%{width: 300px;}
+}
+
+
+.iSlider{
+    position: relative;
+    width: 300%;
+    height: 20rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: slide 20s ease-out 0s infinite normal none;
+
+    div{
+        padding: 1rem 1rem;
+        margin: 0rem 1rem; 
+        background-color: $backgroundColor;
+        border-radius: 5px;
+        
+
+        img{
+            width: 300px;
+            height: auto;
+            animation: sizeAnimation 20s linear 0s infinite normal none;
+        }
+
+    .image{ animation: none}
+    .image2{ animation-delay: 0s;}
+    .image3{ animation-delay: 3.2s;}
+    .image4{ animation-delay: 6.4s;}
+    .image5{ animation-delay: 9.6s;}
+    .image6{ animation-delay: 12.8s;}
+    .image1{ animation-delay: 16.4s;}
+    }
+}
+
+
+/* --------------- contact section ---------------- */
+
+
+#contact{
+    padding: 2rem 7rem 4rem 7rem;
+    background-color: darken($backgroundColor, 12%);
+    @include flex(row, wrap, space-between, flex-start, flex-start);
+    text-align: center;
+
+   &::before{
+       content: 'contact';
+       position: relative;
+       top: -4.7rem;
+       @extend %headersSize;
+       color: darken($backgroundColor, 12%);
+   }
+    
+    h2{
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        margin: 0.5rem;
+        font-weight: bolder;
+    }
+
+
+    h3{
+        margin-bottom: 1.5rem;
+
+        &::after{
+            content: '';
+            display: block;
+            height: 2px;
+            width: 50%;
+            margin: 6px auto 0 auto;
+            background-color:  $secondColor;
+            box-shadow: 0 1px 2px $secondColor;
+        }
+    }
+
+}
+
+.formDiv{
+    width: 45%;
+    margin: 2rem 1rem;
+    justify-self: flex-start;
+
+    form{
+        display: flex;
+        flex-flow: column nowrap;
+
+        textarea{
+            resize: none;
+            height: 10rem;
+        }
+
+        input{
+            height: 2rem;
+            width: 60%;
+        }
+
+        input[type="submit"]{
+            color: #fcb25b;
+            border-color: #fcb25b;
+            width: 40%;
+            margin: 0.2rem 1rem;
+            align-self: flex-end;
+        }
+
+        input[type="submit"]:hover{
+            box-shadow: 0 0 3px;
+        }
+
+        textarea, input{
+            margin: 1rem 0;
+            background-color: darken($backgroundColor, 18%);
+            color: darken(#fff , 10%);
+        }
+
+        textarea:focus, input:focus{
+            background-color: darken($backgroundColor, 14%);
+            outline: outset 2px;
+            border-color: transparent;
+        }
+
+    }
+}
+
+.or{
+    width: 2%;
+    margin: 2rem;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.4em;
+}
+
+.contactInfo{
+    width: 40%;
+    margin: 2rem 1rem;
+    justify-self: flex-end;
+
+    h3::after{
+        width: 70% !important;
+    }
+
+    div{
+        margin: 35px 0.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0.2rem 0.5rem;
+        
+        img{
+            width: 45px;
+            height: auto;
+            margin-right: 1rem;
+            border-radius: 10%;
+            padding: 0.3rem;
+            transition: transform 1s ;
+
+            &:hover{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    .infoMail{
+        @include s-colors(lighten($headerColor, 5%));       
+    }
+    .infoPhone{
+        @include s-colors(#DD7560);
+    }
+    .infoAddress{
+        @include s-colors(#fcb25b);
+    }
+
+    p{
+        text-align: left;
+    }
+}
+
+
+
+/* --------------- footer ---------------- */
+
+footer{
+    background-color: darken($backgroundColor, 10%);
+}
+
+.footerContainer{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 4rem;
+    width: 21rem;
+    @include gradientBorders(2px, 0, 0, 0, to right);
+}
+
+
+
+
+   
+

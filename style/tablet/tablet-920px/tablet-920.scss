@@ -1,0 +1,52 @@
+
+ /* --------- header --------- */
+
+.mainNav{
+    margin: -5rem 1rem 0 1rem;
+}
+
+ul{
+    flex-flow: column nowrap;
+    align-items: center;
+
+    li{
+        width: 70%;
+        margin: 10px 0;
+
+        a{
+            padding: 20px 0;
+        }
+    }
+
+}
+
+/*  --------- about section  --------- */
+
+#about{
+    h2{
+        font-size: 15em;
+        top: 35rem;
+    }
+}
+
+/*  --------- skills section --------- */
+
+.skillsLeft{
+    justify-content: center;
+
+    div{
+        width: 10rem; 
+    }
+}
+
+.skillsRight{
+    margin-top: 5rem !important;
+}
+
+
+
+/*  --------- projects section --------- */
+
+.projectsText{
+    width: 80%;
+}

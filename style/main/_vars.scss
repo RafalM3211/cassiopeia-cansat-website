@@ -1,0 +1,49 @@
+$backgroundColor: #444064; 
+$secondColor: #f9af00;
+$headerColor: #A34963;
+$secondaryBackgroundColor: #c4c4c4;
+
+
+%headersSize{
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@mixin gradientBorders($widthTop, $widthLeft, $widthRight, $widthBottom, $gradientDirection){
+    border-top: $widthTop;
+    border-left: $widthLeft;
+    border-right: $widthRight;
+    border-bottom: $widthBottom;
+    border-style: solid;
+    border-image: linear-gradient($gradientDirection, $headerColor, $secondColor); /* to top right */
+    border-image-slice: 1;
+}
+
+
+@mixin s-colors($s-color){
+
+    color: $s-color;
+
+    a{
+        color: $s-color;
+    }
+
+    a:hover{
+        color: darken($s-color, 10%);
+    }
+
+    img{
+        background-color: $s-color;
+    }
+}
+
+@mixin flex($flexDirection: row, $wrap: nowrap, $justify: flex-start, $alignItems: flex-start, $alignContent: flex-start) {
+    display: flex;
+    flex-flow: $flexDirection $wrap;
+    justify-content: $justify;
+    align-items: $alignItems;
+    align-content: $alignContent;
+}
+
+

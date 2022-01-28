@@ -1,0 +1,78 @@
+
+/* header */
+
+.mainHeader{
+    height: auto;
+
+}
+
+.headerBackground{
+    padding-bottom: 2rem;
+
+}
+
+.headerContainer{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+
+    &::before{
+        display: none;
+    }
+
+    .introduction{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.mainNav{
+    ul{
+        justify-content: center;
+    }
+}
+
+/* about */
+
+
+
+/* skills section */
+
+#skills{
+    padding: 5rem 1rem 10rem 1rem;
+}
+
+.skillsLeft{
+    width: 100%;
+    margin: 0 1rem !important;
+    justify-content: center;
+    order: 2;
+
+    div{
+        width: 139px;
+    }
+}
+
+.skillsRight{
+    width: 75%;
+    margin-bottom: 3rem !important;
+}
+
+/* projects section */
+
+.projectsText{
+    h2{
+        text-align: center;
+        width: 90% !important;
+    }
+}
+
+/* contact section */
+
+#contact{
+    flex-flow: column nowrap;
+}
