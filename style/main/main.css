@@ -186,7 +186,7 @@ ul li:last-child:hover {
 }
 
 .socialMedias {
-  margin-top: 3em;
+  margin-top: 2em;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -233,7 +233,7 @@ ul li:last-child:hover {
   color: #129af6;
 }
 .socialMedias .fb a {
-  color: #129af6;
+  color: white;
 }
 .socialMedias .fb a:hover {
   color: #087ecd;
@@ -245,7 +245,7 @@ ul li:last-child:hover {
   color: #fcb25b;
 }
 .socialMedias .insta a {
-  color: #fcb25b;
+  color: white;
 }
 .socialMedias .insta a:hover {
   color: #fb9a29;
@@ -259,28 +259,28 @@ ul li:last-child:hover {
   height: auto;
 }
 .socialMedias .dribble {
-  color: #e84c8b;
+  color: #295266;
 }
 .socialMedias .dribble a {
-  color: #e84c8b;
+  color: white;
 }
 .socialMedias .dribble a:hover {
-  color: #e21f6e;
+  color: #1a3542;
 }
 .socialMedias .dribble img {
-  background-color: #e84c8b;
+  background-color: #295266;
 }
 .socialMedias .yt {
-  color: #FF0000;
+  color: #455f70;
 }
 .socialMedias .yt a {
-  color: #FF0000;
+  color: white;
 }
 .socialMedias .yt a:hover {
-  color: #cc0000;
+  color: #324450;
 }
 .socialMedias .yt img {
-  background-color: #FF0000;
+  background-color: #455f70;
 }
 /* --------------- skills section ---------------- */
 #skills {
@@ -640,7 +640,7 @@ ul li:last-child:hover {
   color: #b2536f;
 }
 .contactInfo .infoMail a {
-  color: #b2536f;
+  color: white;
 }
 .contactInfo .infoMail a:hover {
   color: #914158;
@@ -652,7 +652,7 @@ ul li:last-child:hover {
   color: #DD7560;
 }
 .contactInfo .infoPhone a {
-  color: #DD7560;
+  color: white;
 }
 .contactInfo .infoPhone a:hover {
   color: #d45136;
@@ -664,7 +664,7 @@ ul li:last-child:hover {
   color: #fcb25b;
 }
 .contactInfo .infoAddress a {
-  color: #fcb25b;
+  color: white;
 }
 .contactInfo .infoAddress a:hover {
   color: #fb9a29;
