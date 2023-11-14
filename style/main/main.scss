@@ -10,9 +10,6 @@ body{
     font-family: 'Quicksand', sans-serif;
     color: #fff;
 
-    p::first-letter{
-        padding-left: 1rem;
-    }
 
     p{
         text-align: justify;
@@ -24,59 +21,6 @@ a{
     text-decoration: none;
 }
 
-/* --------------- scrollbar --------------- */
-
-body::-webkit-scrollbar{
-    width: 15px;
-
-    &-button{
-        background-color: darken($backgroundColor, 8%);
-        background-size: 13px 13px;
-        background-repeat: no-repeat;
-        background-position: center center;
-
-        &:vertical:decrement{
-            background-image: url(../../images/up.png);
-        }
-
-        &:vertical:increment{
-            background-image: url(../../images/down.png);
-        }
-
-        &:horizontal:increment{
-            background-image: url(../../images/right.png);
-        }
-
-        &:horizontal:decrement{
-            background-image: url(../../images/left.png);
-        }
-
-        &:hover{
-            background-color: lighten($backgroundColor, 10%);
-        }
-    }
-
-   &-track{
-        background-color: darken($backgroundColor, 5%);
-        box-shadow: inset 0 0 5px  darken($backgroundColor, 10%); 
-        border-left: 1px solid darken($backgroundColor, 10%);
-    }
-    
-    &-corner{
-         background-color: darken($backgroundColor, 10%);
-    }
-    
-    &-thumb{
-        background-color: darken($headerColor, 13%);
-        box-shadow: inset 0 0 2px  darken($headerColor, 30%);
-    
-        &:active{
-            background-color: lighten($headerColor, 10%);
-        }
-
-    }
-
-}
 
 
 /* --------------- header --------------- */
@@ -103,26 +47,31 @@ body::-webkit-scrollbar{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 
+    box-sizing: border-box;
+    padding: 0 8%;
     margin-top: 5.5rem;
     font-size: 1.3em;
     width: 100%;
 
-    &::before{
+    /* &::before{
         position: absolute;
         content: '';
         height: 12rem;
         @include gradientBorders(0, 1.5px, 0, 0, to bottom);
-    }
+    } */
 
 }
 
 .introduction{
+    font-size: 1.2em;
     width: 33rem;
+    padding: 1rem 0;
     padding-left: 1rem;
+    @include gradientBorders(0, 2px, 0, 0, to bottom);
 
     div>h1, div>h2, div{
-        padding-top: 0.6rem ; 
         margin: 0;
         font-weight: 500;
     }
@@ -131,37 +80,10 @@ body::-webkit-scrollbar{
         color: $secondColor;     
     }
 
-    .hire{
-        height: 110px;
-        width: 20rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        @keyframes hireButtonAnimation{
-            from{background-color: transparent;}
-            to{background-color: darken(rgba($backgroundColor, 0.5), 5%);}
-        }
-
-        a{
-            display: block;   
-            @include gradientBorders(4px, 4px, 4px, 4px, to top right);   
-            padding: 10px 30px;
-            font-weight: 600;
-            font-size: 1.2em;
-            color: darken($secondColor, 5%);
-            transition: padding 0.1s , background-color 0.3s ;
-            animation: hireButtonAnimation 4s ease 1s infinite alternate none;
-        }
-
-        a:hover{
-            padding: 10px 35px;
-            background-color: darken(rgba($backgroundColor, 0.5), 5%);
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-direction: alternate-reverse;
-        }
+    p{
+        text-align: left;
+        margin: 0.4em 0;
+        padding-left: 0;
     }
 }
 
@@ -260,6 +182,7 @@ ul{
 
 
 .socialMedias{
+    margin-top: 3em;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -360,6 +283,11 @@ ul{
     margin: 7rem 0 0 0;
     padding: 5rem 5rem 10rem 5rem;
     @include flex(row, wrap, center, flex-start, flex-start);
+
+    
+    p::first-letter{
+        padding-left: 1rem;
+    }
     
     .skillsLeft, .skillsRight{
         margin: 0 3rem;
