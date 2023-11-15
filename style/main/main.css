@@ -17,6 +17,11 @@ body {
 body p {
   text-align: justify;
 }
+body .article-head {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ba657e;
+}
 
 a {
   color: white;
@@ -173,16 +178,26 @@ ul li:last-child:hover {
 }
 #about h2 {
   position: absolute;
-  top: 25rem;
+  top: 30rem;
   font-size: 25em;
   color: #2f2c45;
   z-index: -1;
 }
 #about article {
   width: 60%;
+  padding-top: 1em;
+}
+#about article section {
+  margin-bottom: 4em;
 }
 #about article p {
   text-align: center;
+  font-size: 1.05em;
+}
+#about article h3 {
+  color: #ba657e;
+  text-shadow: 3px 3px 1px #391a23;
+  margin-top: 2em;
 }
 
 .socialMedias {
@@ -199,13 +214,14 @@ ul li:last-child:hover {
 .socialMedias .myImage img {
   width: 350px;
   height: auto;
+  margin-bottom: 5px;
 }
 .socialMedias .myImage::after {
   content: "";
   width: 100%;
   height: 2px;
   background-color: #787878;
-  box-shadow: 0 -2px 5px #6b6b6b;
+  box-shadow: 0 -10px 20px 2px #6b6b6b;
 }
 .socialMedias .socialsWrapper1 > div {
   justify-content: flex-end;
@@ -237,6 +253,7 @@ ul li:last-child:hover {
 }
 .socialMedias .fb a:hover {
   color: #087ecd;
+  text-shadow: 0 0 1px 2px white;
 }
 .socialMedias .fb img {
   background-color: #129af6;
@@ -249,6 +266,7 @@ ul li:last-child:hover {
 }
 .socialMedias .tiktok a:hover {
   color: black;
+  text-shadow: 0 0 1px 2px white;
 }
 .socialMedias .tiktok img {
   background-color: #000000;
@@ -266,6 +284,7 @@ ul li:last-child:hover {
 }
 .socialMedias .dribble a:hover {
   color: #1a3542;
+  text-shadow: 0 0 1px 2px white;
 }
 .socialMedias .dribble img {
   background-color: #295266;
@@ -278,6 +297,7 @@ ul li:last-child:hover {
 }
 .socialMedias .yt a:hover {
   color: #43657b;
+  text-shadow: 0 0 1px 2px white;
 }
 .socialMedias .yt img {
   background-color: #55809c;
@@ -644,6 +664,7 @@ ul li:last-child:hover {
 }
 .contactInfo .infoMail a:hover {
   color: #914158;
+  text-shadow: 0 0 1px 2px white;
 }
 .contactInfo .infoMail img {
   background-color: #b2536f;
@@ -656,6 +677,7 @@ ul li:last-child:hover {
 }
 .contactInfo .infoPhone a:hover {
   color: #d45136;
+  text-shadow: 0 0 1px 2px white;
 }
 .contactInfo .infoPhone img {
   background-color: #DD7560;
@@ -668,6 +690,7 @@ ul li:last-child:hover {
 }
 .contactInfo .infoAddress a:hover {
   color: #fb9a29;
+  text-shadow: 0 0 1px 2px white;
 }
 .contactInfo .infoAddress img {
   background-color: #fcb25b;
