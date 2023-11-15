@@ -241,8 +241,8 @@ ul{
         @include s-colors(#129af6);
     }
 
-    .insta{
-        @include s-colors(#fcb25b);
+    .tiktok{
+        @include s-colors(#000000);
     }
 
 
@@ -262,7 +262,7 @@ ul{
     }
 
     .yt{
-        @include s-colors(#455f70);
+        @include s-colors(#55809c);
 
         img{
             @extend %yt-dribble-icons; 

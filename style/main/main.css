@@ -241,17 +241,17 @@ ul li:last-child:hover {
 .socialMedias .fb img {
   background-color: #129af6;
 }
-.socialMedias .insta {
-  color: #fcb25b;
+.socialMedias .tiktok {
+  color: #000000;
 }
-.socialMedias .insta a {
+.socialMedias .tiktok a {
   color: white;
 }
-.socialMedias .insta a:hover {
-  color: #fb9a29;
+.socialMedias .tiktok a:hover {
+  color: black;
 }
-.socialMedias .insta img {
-  background-color: #fcb25b;
+.socialMedias .tiktok img {
+  background-color: #000000;
 }
 .socialMedias .yt img, .socialMedias .dribble img {
   padding: 5px;
@@ -271,16 +271,16 @@ ul li:last-child:hover {
   background-color: #295266;
 }
 .socialMedias .yt {
-  color: #455f70;
+  color: #55809c;
 }
 .socialMedias .yt a {
   color: white;
 }
 .socialMedias .yt a:hover {
-  color: #324450;
+  color: #43657b;
 }
 .socialMedias .yt img {
-  background-color: #455f70;
+  background-color: #55809c;
 }
 /* --------------- skills section ---------------- */
 #skills {
