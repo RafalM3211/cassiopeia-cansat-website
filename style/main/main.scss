@@ -35,13 +35,13 @@ a{
 /* --------------- header --------------- */
 
 .mainHeader{
-    background: url(../../images/bg.png) center 0 no-repeat;
+    background: url(../../images/background.jpg) center 0 no-repeat;
     background-size: 100% 100%;
     height: 100vh;
 }
 
 .headerBackground{
-    background-color: rgba($backgroundColor, 0.7);
+    background-color: rgba($backgroundColor, 0.5);
     box-sizing: border-box;
     width: 100%;
     height: 100%;
