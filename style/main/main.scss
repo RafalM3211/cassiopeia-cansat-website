@@ -167,7 +167,7 @@ ul{
         color: $backgroundColor;
         @extend %headersSize;
         position: relative;
-        top: -0.9em;
+        top: -1em;
         left: -9.5em;
     }
 
@@ -331,16 +331,7 @@ ul{
     box-sizing: border-box;
     margin: 7rem 0 0 0;
     padding: 5rem 5rem 10rem 5rem;
-    @include flex(row, wrap, center, flex-start, flex-start);
 
-    
-    p::first-letter{
-        padding-left: 1rem;
-    }
-    
-    .skillsLeft, .skillsRight{
-        margin: 0 3rem;
-    }
 
     .sectionTitle{
         position: relative;
@@ -353,336 +344,45 @@ ul{
     }
 }
 
-.skillsLeft{
-    width: 35%;
-    @include flex(row, wrap, space-between, center, space-between);
-
-    div{
-        @include flex(column, nowrap, center, center, flex-start);
-        width: 10rem;
-        height: 10rem;
-         background-color: rgba($secondaryBackgroundColor, 0.7); 
-        margin: 1rem;
-    }
-
-    img{
-        padding: 6px;
-        margin-top: -3px;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 66%;
-        height: auto;
-    }
-
-}
-
-.skillsRight{
-   width: 45%;
-
-   .skillsText>h2{
-        font-size: 3em;
-        font-weight: lighter;
-        margin: 20px 0;
-   }
-}
-
-.chart{
-    width: 100%
-}
-
-
-.chartWrapper{
-    @include flex(row, wrap, space-between, flex-start, space-between);
-    width: 100%;
-    margin-top: 1.5rem;
-
-    .skillName, .skillPercent{
-        width: 45%;
-        padding: 2px 0.2rem;
-        margin-bottom: 4px;
-
-    }
-
-    .skillPercent{
-        text-align: right;
-    }
-
-    .skillBarHTML, .skillBarCSS, .skillBarJS, .skillBarPS{
-        width: 100%;
-        height: 0.1rem;
-        margin-top: 0.45rem;
-        background-color: $secondaryBackgroundColor;
-
-        &::before{
-            content: '';
-            display: block;
-            margin-top: -0.35rem;
-            height: 0.8rem;
-        }
-        
-    }
-
-    .skillBarHTML::before{
-        background-color: $headerColor;
-        width: 65%;
-    }
-
-    .skillBarCSS::before{
-        background-color: #DD7560;
-        width: 80%;
-    }
-
-    .skillBarJS::before{
-        background-color: #fcb25b;
-        width: 35%;
-    }
-
-    .skillBarPS::before{
-        background-color: #f9f871;
-        width: 25%;
-    }
-}
-
-
-/* --------------- projects section ---------------- */
-
-
-#projects{
-    padding: 6rem 0rem;
-    background-image: linear-gradient(darken($backgroundColor, 8%), darken($headerColor, 25%), darken($headerColor, 20%), darken($backgroundColor, 8%));
-
-    &::before{
-        content: 'My Projects';
-        position: relative;
-        color: darken($headerColor, 10%);
-        top: -5rem;
-        left: 2rem;
-        @extend %headersSize;
-
-    }
-
-    .projectsText{
-        width: 75%;
-        margin: 0 auto;
-
-        h2{
-            font-size: 2.5em;
-            font-weight: lighter;
-            width: 70%;
-        }
-    }
-}
-
-
-.images{
-    width: 100%;
-    background-color: darken(rgba($backgroundColor, 0.3), 10%);
-    padding: 4rem 0;
-    margin: 5rem 0;
-    overflow: hidden;
-    box-shadow: inset 0 0 4rem rgba(darken($backgroundColor, 30%), 0.7), 0 0 2rem darken($backgroundColor, 20%);
-}
-
-@keyframes slide{
-    0%{left: 0;}
-    10%{left: -32.9%;}
-    16%{left: -33%;}
-    26%{left: -66.9%;}
-    33%{left: -67%;}
-    42%{left: -99.9%;}
-    48%{left: -100%;}
-    59%{left: -132.9%;}
-    65%{left: -133%;}
-    75%{left: -165.9%;}
-    82%{left: -166%;}
-    92%{left: -199.9%;}
-    100%{left: -200%;}
-}
-
-@keyframes sizeAnimation{
-    0%{width: 300px;}
-    10%{width: 338px;}
-    16%{width: 338px;}
-    26%{width: 300px;}
-    100%{width: 300px;}
-}
-
-
-.iSlider{
-    position: relative;
-    width: 300%;
-    height: 20rem;
+.member-list{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-evenly;
-    align-items: center;
-    animation: slide 20s ease-out 0s infinite normal none;
+    flex-wrap: wrap;
 
-    div{
-        padding: 1rem 1rem;
-        margin: 0rem 1rem; 
-        background-color: $backgroundColor;
-        border-radius: 5px;
-        
-
-        img{
-            width: 300px;
-            height: auto;
-            animation: sizeAnimation 20s linear 0s infinite normal none;
-        }
-
-    .image{ animation: none}
-    .image2{ animation-delay: 0s;}
-    .image3{ animation-delay: 3.2s;}
-    .image4{ animation-delay: 6.4s;}
-    .image5{ animation-delay: 9.6s;}
-    .image6{ animation-delay: 12.8s;}
-    .image1{ animation-delay: 16.4s;}
-    }
-}
-
-
-/* --------------- contact section ---------------- */
-
-
-#contact{
-    padding: 2rem 7rem 4rem 7rem;
-    background-color: darken($backgroundColor, 12%);
-    @include flex(row, wrap, space-between, flex-start, flex-start);
-    text-align: center;
-
-   &::before{
-       content: 'contact';
-       position: relative;
-       top: -4.7rem;
-       @extend %headersSize;
-       color: darken($backgroundColor, 12%);
-   }
-    
-    h2{
-        width: 100%;
+    .member{
+        background-color: rgba($secondaryBackgroundColor, 0.7); 
+        margin: 1rem;
+        padding: 1rem;
+        max-width: 23rem;
         text-align: center;
-        font-size: 2em;
-        margin: 0.5rem;
-        font-weight: bolder;
-    }
 
 
-    h3{
-        margin-bottom: 1.5rem;
-
-        &::after{
-            content: '';
-            display: block;
-            height: 2px;
-            width: 50%;
-            margin: 6px auto 0 auto;
-            background-color:  $secondColor;
-            box-shadow: 0 1px 2px $secondColor;
-        }
-    }
-
-}
-
-.formDiv{
-    width: 45%;
-    margin: 2rem 1rem;
-    justify-self: flex-start;
-
-    form{
-        display: flex;
-        flex-flow: column nowrap;
-
-        textarea{
-            resize: none;
-            height: 10rem;
-        }
-
-        input{
-            height: 2rem;
-            width: 60%;
-        }
-
-        input[type="submit"]{
-            color: #fcb25b;
-            border-color: #fcb25b;
-            width: 40%;
-            margin: 0.2rem 1rem;
-            align-self: flex-end;
-        }
-
-        input[type="submit"]:hover{
-            box-shadow: 0 0 3px;
-        }
-
-        textarea, input{
-            margin: 1rem 0;
-            background-color: darken($backgroundColor, 18%);
-            color: darken(#fff , 10%);
-        }
-
-        textarea:focus, input:focus{
-            background-color: darken($backgroundColor, 14%);
-            outline: outset 2px;
-            border-color: transparent;
-        }
-
-    }
-}
-
-.or{
-    width: 2%;
-    margin: 2rem;
-    justify-self: center;
-    align-self: center;
-    font-size: 1.4em;
-}
-
-.contactInfo{
-    width: 40%;
-    margin: 2rem 1rem;
-    justify-self: flex-end;
-
-    h3::after{
-        width: 70% !important;
-    }
-
-    div{
-        margin: 35px 0.5rem;
-        display: flex;
-        align-items: center;
-        padding: 0.2rem 0.5rem;
-        
         img{
-            width: 45px;
+            padding: 10px;
+            margin-top: -3px;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 9rem;
             height: auto;
-            margin-right: 1rem;
-            border-radius: 10%;
-            padding: 0.3rem;
-            transition: transform 1s ;
+        }
 
-            &:hover{
-                transform: rotateY(180deg);
-            }
+        h3{
+            font-size: 1.8em;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        h4{
+            margin-top: 0;
+        }
+    
+        
+        p{
+            text-align: center;
+            font-size: 0.9em;
         }
     }
-
-    .infoMail{
-        @include s-colors(lighten($headerColor, 5%));       
-    }
-    .infoPhone{
-        @include s-colors(#DD7560);
-    }
-    .infoAddress{
-        @include s-colors(#fcb25b);
-    }
-
-    p{
-        text-align: left;
-    }
 }
-
-
 
 /* --------------- footer ---------------- */
 
@@ -693,9 +393,24 @@ footer{
 .footerContainer{
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     width: 21rem;
     @include gradientBorders(2px, 0, 0, 0, to right);
+    text-align: center;
+
+    p{
+        margin: 0.3em 0;
+        text-align: center;
+    }
+
+    a{
+        color: lighten($backgroundColor, 20%);
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
 }
 
 
