@@ -17,7 +17,7 @@ body{
 
     .article-head{
         font-size: 1.3em;
-        font-weight: bold;
+        font-weight: normal;
         color: lighten($headerColor, 10%);
 
     }
@@ -181,12 +181,30 @@ ul{
 
         
     article{
-        width: 60%;
+        width: 80%;
         padding-top: 1em;
 
-        section{
-            margin-bottom: 4em;
+        section.first{
+            margin: 0 auto;
+            margin-bottom: 7em;
+            width: 70%;
         }
+
+        section.second{
+            position: relative;
+        }
+
+        section.second::before{
+            content: "our goals";
+            font-size: 3em;
+            font-weight: 600;
+            color: darken($backgroundColor, 10%);
+            position: absolute;
+            top: -0.75em;
+            left: 1em;
+
+        }
+
 
         p{
             text-align: center;
@@ -195,8 +213,17 @@ ul{
 
         h3{
             color: lighten($headerColor, 10%);
-            text-shadow: 3px 3px 1px darken($headerColor, 30%);
-            margin-top: 2em;
+            text-shadow: 3px 3px 1px darken($headerColor, 20%);
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+
+        .goals-block{
+            padding: 1em 2em;
+            background-color: darken($backgroundColor, 5%);
+            margin: 4em 0;
+            
+            @include gradientBorders(0, 2px, 0, 0, to bottom);
         }
     }
 }

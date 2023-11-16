@@ -19,7 +19,7 @@ body p {
 }
 body .article-head {
   font-size: 1.3em;
-  font-weight: bold;
+  font-weight: normal;
   color: #ba657e;
 }
 
@@ -184,11 +184,25 @@ ul li:last-child:hover {
   z-index: -1;
 }
 #about article {
-  width: 60%;
+  width: 80%;
   padding-top: 1em;
 }
-#about article section {
-  margin-bottom: 4em;
+#about article section.first {
+  margin: 0 auto;
+  margin-bottom: 7em;
+  width: 70%;
+}
+#about article section.second {
+  position: relative;
+}
+#about article section.second::before {
+  content: "our goals";
+  font-size: 3em;
+  font-weight: 600;
+  color: #2f2c45;
+  position: absolute;
+  top: -0.75em;
+  left: 1em;
 }
 #about article p {
   text-align: center;
@@ -196,8 +210,22 @@ ul li:last-child:hover {
 }
 #about article h3 {
   color: #ba657e;
-  text-shadow: 3px 3px 1px #391a23;
-  margin-top: 2em;
+  text-shadow: 3px 3px 1px #5d2938;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+#about article .goals-block {
+  padding: 1em 2em;
+  background-color: #393654;
+  margin: 4em 0;
+  border-top: 0;
+  border-left: 2px;
+  border-right: 0;
+  border-bottom: 0;
+  border-style: solid;
+  -o-border-image: linear-gradient(to bottom, #A34963, #f9af00);
+     border-image: linear-gradient(to bottom, #A34963, #f9af00); /* to top right */
+  border-image-slice: 1;
 }
 
 .socialMedias {
