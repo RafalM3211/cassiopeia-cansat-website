@@ -178,7 +178,8 @@ ul li:last-child:hover {
 }
 #about h2 {
   position: absolute;
-  top: 30rem;
+  margin-top: 0;
+  top: 100vh;
   font-size: 25em;
   color: #2f2c45;
   z-index: -1;

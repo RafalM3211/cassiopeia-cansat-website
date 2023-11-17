@@ -17,9 +17,23 @@
   }
 }
 /*  --------- about section  --------- */
-#about h2 {
-  font-size: 15em;
-  top: 45rem;
+#about .socialMedias {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#about .socialMedias .socialsWrapper1, #about .socialMedias .socialsWrapper2 {
+  margin: 0;
+  width: 50%;
+}
+#about .socialMedias .socialsWrapper1 {
+  order: 1;
+}
+#about .socialMedias .socialsWrapper2 {
+  order: 3;
+}
+#about .socialMedias .myImage {
+  order: 0;
+  margin: 0 2rem;
 }
 
 /*  --------- skills section --------- */

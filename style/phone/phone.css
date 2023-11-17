@@ -31,6 +31,23 @@
 }
 
 /* about */
+#about::before {
+  left: 0;
+}
+#about .socialMedias .myImage {
+  margin: 0;
+}
+#about .socialMedias .myImage img {
+  width: clamp(200px, 100%, 350px);
+  margin: auto;
+}
+#about article {
+  width: 100%;
+}
+#about article section.first {
+  width: 90%;
+}
+
 /* skills section */
 #skills {
   padding: 5rem 1rem 10rem 1rem;

@@ -27,9 +27,30 @@
 /*  --------- about section  --------- */
 
 #about{
-    h2{
-        font-size: 15em;
-        top: 45rem;
+
+    .socialMedias{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    
+        .socialsWrapper1, .socialsWrapper2{
+            margin: 0;
+            width: 50%;
+        }
+    
+        .socialsWrapper1{
+            order: 1;
+        }
+    
+        .socialsWrapper2{
+            order: 3;
+        }
+    
+    
+        .myImage{
+            order: 0;
+            margin: 0 2rem;
+        }
     }
 }
 

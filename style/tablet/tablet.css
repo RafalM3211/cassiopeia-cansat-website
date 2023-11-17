@@ -1,24 +1,9 @@
 /* about section */
 #about h2 {
-  font-size: 22em;
-  top: 28rem;
+  margin-top: 0;
+  font-size: 30vw;
+  top: 100vh;
 }
 #about::before {
   left: -30%;
-}
-
-.socialMedias {
-  flex-direction: column;
-}
-.socialMedias .socialsWrapper1, .socialMedias .socialsWrapper2 {
-  margin: 0 2rem !important;
-}
-.socialMedias .socialsWrapper1 {
-  order: 1;
-}
-.socialMedias .socialsWrapper2 {
-  order: 3;
-}
-.socialMedias .myImage {
-  order: 0;
 }/*# sourceMappingURL=tablet.css.map */

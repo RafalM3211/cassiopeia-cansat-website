@@ -173,7 +173,8 @@ ul{
 
     h2{
         position: absolute;
-        top: 30rem;
+        margin-top: 0;
+        top: 100vh;
         font-size: 25em;
         color: darken($backgroundColor, 10%);
         z-index: -1;

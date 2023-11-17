@@ -3,8 +3,9 @@
 
 #about{
     h2{
-        font-size: 22em;
-        top: 28rem;
+        margin-top: 0;
+        font-size: 30vw;
+        top: 100vh;
     }
 
     &::before{
@@ -12,23 +13,4 @@
     }
 }
 
-.socialMedias{
-    flex-direction: column;
 
-    .socialsWrapper1, .socialsWrapper2{
-        margin: 0 2rem !important;
-    }
-
-    .socialsWrapper1{
-        order: 1;
-    }
-
-    .socialsWrapper2{
-        order: 3;
-    }
-
-
-    .myImage{
-        order: 0;
-    }
-}
