@@ -1,10 +1,11 @@
 /* header */
 
 .headerBackground{
-    padding: 0.5rem 1rem;
-    img{
-        width: 100%;
-        height: auto;
+    padding: 0.5rem 0rem;
+
+    .logoImg{
+        margin: 0.5rem;
+        margin-left: 1rem;
     }
 }
 

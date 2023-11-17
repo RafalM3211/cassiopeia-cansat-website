@@ -98,7 +98,7 @@ a{
 
 
 .mainNav{
-    width: 400px;
+    width: clamp(1px, 400px, 100%);
     margin: -1rem 3rem ;
     height: 100%;
 }
@@ -256,9 +256,8 @@ ul{
         }
     }
 
-    .socialsWrapper1>div{
-        justify-content: flex-end;
-    }
+
+    
 
  
 
@@ -285,6 +284,18 @@ ul{
             transition: transform 1s ;
         }
 
+    }
+
+    .socialsWrapper1{
+        margin-left: 0;
+
+        div{
+            justify-content: flex-end;
+        }
+    }
+
+    .socialsWrapper2{
+        margin-right: 0;
     }
 
 

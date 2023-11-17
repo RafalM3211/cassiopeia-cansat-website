@@ -92,7 +92,7 @@ a {
 }
 
 .mainNav {
-  width: 400px;
+  width: clamp(1px, 400px, 100%);
   margin: -1rem 3rem;
   height: 100%;
 }
@@ -252,9 +252,6 @@ ul li:last-child:hover {
   background-color: #787878;
   box-shadow: 0 -10px 20px 2px #6b6b6b;
 }
-.socialMedias .socialsWrapper1 > div {
-  justify-content: flex-end;
-}
 .socialMedias .socialsWrapper1, .socialMedias .socialsWrapper2 {
   margin: 0 5.5em;
   font-size: 1.1em;
@@ -274,6 +271,15 @@ ul li:last-child:hover {
   border-radius: 40%;
   margin: 0 1rem;
   transition: transform 1s;
+}
+.socialMedias .socialsWrapper1 {
+  margin-left: 0;
+}
+.socialMedias .socialsWrapper1 div {
+  justify-content: flex-end;
+}
+.socialMedias .socialsWrapper2 {
+  margin-right: 0;
 }
 .socialMedias .fb {
   color: #129af6;

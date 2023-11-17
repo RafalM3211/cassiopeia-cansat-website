@@ -26,6 +26,9 @@
   text-align: center;
 }
 
+.mainNav {
+  margin: 0;
+}
 .mainNav ul {
   justify-content: center;
 }
@@ -43,6 +46,7 @@
 }
 #about article {
   width: 100%;
+  font-size: 0.9em;
 }
 #about article section.first {
   width: 90%;
@@ -68,13 +72,12 @@
   margin-bottom: 3rem !important;
 }
 
-/* projects section */
-.projectsText h2 {
-  text-align: center;
-  width: 90% !important;
+/* team section */
+#team {
+  padding: 2rem 2rem;
 }
 
-/* contact section */
-#contact {
-  flex-flow: column nowrap;
+/* footer */
+.footerContainer {
+  padding: 1.5rem 0;
 }/*# sourceMappingURL=phone.css.map */

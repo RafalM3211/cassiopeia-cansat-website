@@ -35,6 +35,8 @@
 }
 
 .mainNav{
+    margin: 0;
+
     ul{
         justify-content: center;
     }
@@ -62,11 +64,9 @@
     
     
 
-    .socialsWrapper1, .socialsWrapper2{
-    }
-
     article{
         width: 100%;
+        font-size: 0.9em;
 
         section.first{
             width: 90%;
@@ -96,17 +96,14 @@
     margin-bottom: 3rem !important;
 }
 
-/* projects section */
+/* team section */
 
-.projectsText{
-    h2{
-        text-align: center;
-        width: 90% !important;
-    }
+#team{
+    padding: 2rem 2rem;
 }
 
-/* contact section */
+/* footer */
 
-#contact{
-    flex-flow: column nowrap;
+.footerContainer{
+    padding: 1.5rem 0;
 }
