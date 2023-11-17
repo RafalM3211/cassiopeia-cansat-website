@@ -7,25 +7,18 @@
   left: -30%;
 }
 
-.socialsWrapper1, .socialsWrapper2 {
+.socialMedias {
+  flex-direction: column;
+}
+.socialMedias .socialsWrapper1, .socialMedias .socialsWrapper2 {
   margin: 0 2rem !important;
 }
-
-/* skills section */
-.skillsLeft {
-  width: 38%;
+.socialMedias .socialsWrapper1 {
+  order: 1;
 }
-.skillsLeft div {
-  width: 40%;
+.socialMedias .socialsWrapper2 {
+  order: 3;
 }
-.skillsLeft img {
-  width: 66%;
-  height: auto;
-}
-
-#skills {
-  padding: 5rem 2rem 10rem 2rem;
-}
-#skills .skillsLeft, #skills .skillsRight {
-  margin: 0 1rem;
+.socialMedias .myImage {
+  order: 0;
 }/*# sourceMappingURL=tablet.css.map */

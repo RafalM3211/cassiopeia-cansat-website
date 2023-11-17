@@ -12,32 +12,23 @@
     }
 }
 
-.socialsWrapper1, .socialsWrapper2{
-    margin: 0 2rem !important;
-}
+.socialMedias{
+    flex-direction: column;
 
-/* skills section */
-
-.skillsLeft{
-    width: 38%;
-
-    div{
-        width: 40%;
-
+    .socialsWrapper1, .socialsWrapper2{
+        margin: 0 2rem !important;
     }
 
-    img{
-        width: 66%;
-        height: auto;
+    .socialsWrapper1{
+        order: 1;
+    }
+
+    .socialsWrapper2{
+        order: 3;
+    }
+
+
+    .myImage{
+        order: 0;
     }
 }
-
-#skills{
-    
-    padding: 5rem 2rem 10rem 2rem;
-
-    .skillsLeft, .skillsRight{
-    margin: 0 1rem ;
-    }
-}
-

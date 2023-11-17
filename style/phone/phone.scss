@@ -1,10 +1,7 @@
 
 /* header */
 
-.mainHeader{
-    height: auto;
 
-}
 
 .headerBackground{
     padding-bottom: 2rem;
@@ -14,7 +11,9 @@
 .headerContainer{
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    font-size: 1.2em;
+    padding: 0 1rem;
 
     &::before{
         display: none;
@@ -27,6 +26,11 @@
         flex-flow: column nowrap;
         align-items: center;
         padding: 0;
+        margin: 3rem 0 1rem 0;
+
+        p{
+           text-align: center;
+        }
     }
 }
 

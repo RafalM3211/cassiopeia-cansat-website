@@ -31,7 +31,7 @@ a {
 /* --------------- header --------------- */
 .mainHeader {
   background: url(../../images/background.webp) center 0 no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -257,6 +257,7 @@ ul li:last-child:hover {
 .socialMedias .socialsWrapper1, .socialMedias .socialsWrapper2 {
   margin: 0 5.5em;
   font-size: 1.1em;
+  width: 15%;
 }
 .socialMedias .socialsWrapper1 div, .socialMedias .socialsWrapper2 div {
   margin-top: 3em;
